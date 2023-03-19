@@ -1,0 +1,71 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="AnandEHSM_ARR.controller.EHSMRisk"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	height="100%">
+	<App>
+		<Page title="RISK DETAILS" showNavButton="true" navButtonPress="onPrevious" >
+			
+		<Input placeholder="Incident Number" id="user" class="text" width="12rem"/>
+		<Button width="5rem" text="Go" type="Emphasized" press="onNext" class="mybtn"/>
+		<VBox fitContainer="true">
+		
+		    <smartTable:SmartTable id="Risk" entitySet="LineItemsSet" smartFilterId="smartFilterBar" tableType="Table"   useVariantManagement="true" useTablePersonalisation="true" header="Number of Rows" showRowCount="true"  enableAutoBinding="true"  class="me" app:useSmartToggle="true">
+				<!-- layout data used to make the table growing but the filter bar fixed -->
+				
+					<Table  items="{/results}">
+						<columns>
+							<Column width="9em">
+								<Text text="Incident Number"/>
+							</Column>
+								<Column width="12em">
+								<Text text="Created On"/>
+							</Column>
+								<Column width="9em">
+								<Text text="Created By"/>
+							</Column>
+							<Column width="8em">
+								<Text text="Risk Number"/>
+							</Column>
+								<Column width="8em">
+								<Text text="Type"/>
+							</Column>
+								<Column width="12em">
+								<Text text="Actions Taken"/>
+							</Column>
+							<Column width="8em">
+								<Text text="Checked By"/>
+							</Column>
+							<Column width="6em">
+								<Text text="Severity"/>
+							</Column>
+							<Column width="8em">
+								<Text text="Survival Prblty"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Text text="{Recn}"/>
+									<Text text="{Crdat}"/>
+									<Text text="{Crnam}"/>
+									<Text text="{Riskassetnum}"/>
+									<Text text="{Rem}"/>
+									<Text text="{Rainvresult}"/>
+									<Text text="{Assctrper}"/>
+									<Text text="{Severe}"/>
+									<Text text="{Problty}"/>
+									
+
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+			
+			<Button width="15rem" text="Next" type="Emphasized" press="onSub"></Button>
+			</smartTable:SmartTable>
+		</VBox>
+	</Page>
+	</App>
+</mvc:View>

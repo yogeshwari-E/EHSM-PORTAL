@@ -1,0 +1,187 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "AnandEHSM_ARR",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZEHSM_PORTAL_87_SRV": {
+				"uri": "/sap/opu/odata/sap/ZEHSM_PORTAL_87_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZEHSM_PORTAL_87_SRV/metadata.xml"
+				}
+			},
+			"ZEHSM_PORTAL_INCPLANT_87_SRV": {
+				"uri": "/sap/opu/odata/sap/ZEHSM_PORTAL_INCPLANT_87_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZEHSM_PORTAL_INCPLANT_87_SRV/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "AnandEHSM_ARR.view.EHSMLogin",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "AnandEHSM_ARR.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "AnandEHSM_ARR.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"targets": {
+				"Login": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "EHSMLogin",
+					"viewLevel": 1
+				},
+				"Incident": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "EHSMIncident",
+					"viewLevel": 2
+				},
+				"Dashboard": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "EHSMDashboard",
+					"viewLevel": 2
+				},
+				"Risk": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "EHSMRisk",
+					"viewLevel": 2
+				},
+				"test": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "test",
+					"viewLevel": 2
+				}
+			},
+			"routes": [
+				{
+					"name": "Login",
+					"pattern": "EHSMLogin",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Login"
+					]
+				},
+				{
+					"name": "Dashboard",
+					"pattern": "EHSMDashboard",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Dashboard"
+					]
+				},
+				{
+					"name": "Incident",
+					"pattern": "EHSMIncident",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Incident"
+					]
+				},
+				{
+					"name": "Risk",
+					"pattern": "EHSMRisk",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"Risk"
+					]
+				},
+				{
+					"name": "test",
+					"pattern": "test",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"test"
+					]
+				}
+			]
+		}
+	}
+}

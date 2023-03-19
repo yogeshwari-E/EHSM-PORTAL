@@ -1,0 +1,39 @@
+<mvc:View controllerName="AnandEHSM_ARR.controller.EHSMLogin" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<App id="app">
+		<pages>
+			<Page showHeader="false" title="EHSM LOGIN" class="lgbgimg" navButtonPress="onNavButton" showNavButton="false">
+				<Toolbar width="100%" class="headerdamt">
+					<Text text="EHSM PORTAL LOGIN" class="txttitlelg1"/>
+					<!--<Image src="img/KaarLogo.jpg" width="3.0rem" height="3.0rem" press="company"/>-->
+				</Toolbar>
+				<content>
+					<form:SimpleForm title="" editable="true" layout="ResponsiveGridLayout" class="login" adjustLabelSpan="false" columnsL="1" columnsM="1"
+						emptySpanL="4" emptySpanM="4"><Label/>
+						<Text xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="EHSM PORTAL" id="__text4"
+							textAlign="Center" class="txxmt"/>
+						<form:content>
+							<Image xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+								xmlns:form="sap.ui.layout.form" width="140px" height="140px" class="imglgm" />
+						</form:content>
+						<Input placeholder="Username" id="username" class="text" width="15rem"/>
+						<Label/>
+						<Input placeholder="Password" id="passwd" type="Password" width="15rem" class="pwdmt"/>
+						<Label/>
+						<Button id="btn1" width="15rem" text="Login" type="Emphasized" press="onNext" class="lgmt"/>
+						<!--<Button id="btn2" width="15rem" text="Next" type="Emphasized" press="onSubmit"></Button>-->
+					</form:SimpleForm>
+				</content>
+				<footer>
+					<Toolbar class="foot">
+						<!--<Image src="test-resources/sap/m/demokit/sample/ImageContent/images/SAPLogoLargeTile_28px_height.png" width="5.0rem" height="3.0rem"-->
+						<!--	press="company" class="footimg"/>-->
+						<!--<content class="foottxt">-->
+						<!--	<Text text="KAAR TECHNOLOGIES" id="__text0" textAlign="Center" textDirection="LTR"/>-->
+						<!--</content>-->
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

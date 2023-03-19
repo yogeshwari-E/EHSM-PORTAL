@@ -1,0 +1,68 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="AnandEHSM_ARR.controller.EHSMIncident"
+	xmlns:html="http://www.w3.org/1999/xhtml" 	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	height="100%">
+	<App>
+		<Page title="INCIDENT DETAILS" showNavButton="true" navButtonPress="onPrevious" >
+			
+		<VBox fitContainer="true">
+			
+		
+		    <smartTable:SmartTable id="Incident" entitySet="LineItemsSet" smartFilterId="smartFilterBar" tableType="Table" useExportToExcel="true"  useVariantManagement="true" useTablePersonalisation="true" header="Number of Incidents" showRowCount="true"  enableAutoBinding="true"  class="me" app:useSmartToggle="true">
+				<!-- layout data used to make the table growing but the filter bar fixed -->
+				
+					<Table  items="{/results}">
+						<columns>
+							<Column width="8em">
+								<Text text="Record Number"/>
+							</Column>
+							<Column width="12em">
+								<Text text="Created on"/>
+							</Column>
+							<Column width="10em">
+								<Text text="Created By"/>
+							</Column>
+							<Column width="12em">
+								<Text text="Event Date"/>
+							</Column>
+							<!--	<Column width="12em">-->
+							<!--	<Text text="Event Time"/>-->
+							<!--</Column>-->
+								<Column width="8em">
+								<Text text="Work Area"/>
+							</Column>
+	
+							<Column width="12em">
+								<Text text="Incident"/>
+							</Column>
+							<Column width="12em">
+								<Text text="Reason"/>
+							</Column>
+								<Column width="12em">
+								<Text text="Location"/>
+							</Column>
+						
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Text text="{Recn}"/>
+									<Text text="{Crdat}"/>
+									<Text text="{Crnam}"/>
+									<Text text="{Evdat}"/>
+									<!--<Text text="{Evtime}"/>-->
+									<Text text="{Recntwah}"/>
+									<Text text="{Evdesc}"/>
+									<Text text="{Eqdesc}"/>
+									<Text text="{Acloc}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+			
+			</smartTable:SmartTable>
+		</VBox>
+	</Page>
+	</App>
+</mvc:View>

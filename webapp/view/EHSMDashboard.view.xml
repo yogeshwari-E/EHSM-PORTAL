@@ -1,0 +1,69 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="AnandEHSM_ARR.controller.EHSMDashboard"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" >
+		<App>
+		<pages>
+			<Page title="USER DASHBOARD" showNavButton="true" navButtonPress="onPrevious">
+				<!--<Button width="15rem" text="Production Details" type="Emphasized" press="onNext" class="lgmt"/>-->
+				<!--<Button width="15rem" text="Planned Order Details" type="Emphasized" press="onNew" class="lgmt"/>-->
+				<CustomTile press="onNext" class="sapUiSmallMargin">
+					<content>
+						<VBox class="tileborder">
+							<l:VerticalLayout >
+								<l:HorizontalLayout>
+									<Text text="Incident Details" class="sapUiTinyMargin sapUiMediumMarginBottom"></Text>
+								</l:HorizontalLayout>
+								<l:HorizontalLayout class="sapUiTinyMargin">
+									<Text text="------------------------------------" class="sapUiTinyMargin laybnch"></Text>
+								</l:HorizontalLayout>
+								<l:HorizontalLayout class="sapUiTinyMargin">
+									<Text text="Click to view the Incident details" class="sapUiTinyMargin1 laybnch"></Text>
+								</l:HorizontalLayout>
+								<l:HorizontalLayout class="sapUiTinyMargin">
+									<Text text="------------------------------------" class="sapUiTinyMargin laybnch"></Text>
+								</l:HorizontalLayout>
+								<!--<l:HorizontalLayout class="sapUiTinyMargin lay">-->
+								<!--	<Text text="96%" class="sapUiLargeMarginBegin laybnch"></Text>-->
+								<!--</l:HorizontalLayout>-->
+								<!--<l:HorizontalLayout class="sapUiTinyMargin">-->
+								<!--	<Text text="93%" class="sapUiLargeMarginBegin laybnch"></Text>-->
+								<!--</l:HorizontalLayout>-->
+								<l:HorizontalLayout></l:HorizontalLayout>
+							</l:VerticalLayout>
+							
+						</VBox>
+						
+					</content>
+				</CustomTile>
+				<CustomTile press="onNew" class="sapUiSmallMargin">
+					<content>
+						<VBox class="tileborder">
+							<l:VerticalLayout >
+								<l:HorizontalLayout>
+									<Text text="Risk Details" class="sapUiTinyMargin sapUiMediumMarginBottom"></Text>
+								</l:HorizontalLayout>
+									<l:HorizontalLayout class="sapUiTinyMargin">
+									<Text text="------------------------------------" class="sapUiTinyMargin laybnch"></Text>
+								</l:HorizontalLayout>
+								<l:HorizontalLayout class="sapUiTinyMargin">
+									<Text text="Click to view the Plant Risk details" class="sapUiTinyMargin1 laybnch"></Text>
+								</l:HorizontalLayout>
+									<l:HorizontalLayout class="sapUiTinyMargin">
+									<Text text="------------------------------------" class="sapUiTinyMargin laybnch"></Text>
+								</l:HorizontalLayout>
+								<!--<l:HorizontalLayout class="sapUiTinyMargin lay">-->
+								<!--	<Text text="0001" class="sapUiLargeMarginBegin"></Text>-->
+								<!--</l:HorizontalLayout>-->
+								<!--<l:HorizontalLayout class="sapUiTinyMargin">-->
+								<!--	<Text text="93%" class="sapUiLargeMarginBegin laybnch"></Text>-->
+								<!--</l:HorizontalLayout>-->
+								<l:HorizontalLayout></l:HorizontalLayout>
+							</l:VerticalLayout>
+							
+						</VBox>
+						
+					</content>
+				</CustomTile>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
